@@ -18,6 +18,9 @@ class PostController extends Controller
         $post->description = $request->description;
         $post->image = $request->image;
         $post->save();
+        return redirect()->route('home')->with('success','Your Post has been created');
+
+        // return redirect()->back();
         // return $request->all();
 
     }
